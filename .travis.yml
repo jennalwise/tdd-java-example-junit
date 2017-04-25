@@ -4,6 +4,6 @@ jdk:
   - oraclejdk7
 # This is a comment
 script:
-- if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
+  - gradle jacocoTestReport
 after_success:
   - bash <(curl -s https://codecov.io/bash)
